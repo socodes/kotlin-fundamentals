@@ -1,7 +1,28 @@
 fun main(args: Array<String>) {
-    println("Hello World!")
+    val aUser=AppUser(
+        "Firat",
+        "now",
+        false
+    )
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    //Profile Pic is given default.
+    val user = User(
+        "12345",
+        "Ahmet"
+    )
+}
+
+//cohesion: The degree to which things belong together (in a class)
+
+//cohesive class
+class Dog(
+    val age: Int,
+    val weight: Double,
+    val height: Double,
+    val name: String,
+    val owner: User
+) {
+    fun makeSound(){
+        println("BARK!")
+    }
 }
